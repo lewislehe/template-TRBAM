@@ -1,0 +1,110 @@
+
+%
+% Transportation Research Board conference paper template
+% modified version of the template available here:
+% https://github.com/chiehrosswang/TRB_LaTeX_tex
+% 
+% 
+% When numbered option is activated, lines are numbered.
+\documentclass[numbered]{trbstyle}
+
+
+
+
+% Put here what will go to headers as author
+\AuthorHeaders{Smith, Johnson and Williams}
+\title{Template for TRB Annual Meeting Paper}
+
+\author{%
+  \textbf{John A. Smith}\\
+  jsmith@university.edu\\
+  \hfill\break% this is a way to add line numbering on empty line
+  \textbf{Sarah B. Johnson, Ph.D.}\\
+  \hfill\break%
+  \textbf{Michael C. Williams, Ph.D., Corresponding Author}\\
+  mwilliams@research.org
+}
+
+% If necessary modify the number of words per table or figure default is set to
+% 250 words per table
+% \WordsPerTable{250}
+
+% If words are counted manually, put that number here. This does not include
+% figures and tables. This can also be used to avoid problems with texcount
+% program i.e. if one does not have it installed.
+% \TotalWords{200}
+
+\begin{document}
+\maketitle
+
+\section{Abstract}
+
+Abstract
+
+\hfill\break%
+\noindent\textit{Keywords}: Keyword1, Keyword2
+\newpage
+
+\section{Introduction}
+
+More details about the manuscript details can be found online at
+~\url{http://onlinepubs.trb.org/onlinepubs/AM/InfoForAuthors.pdf}.
+
+This template is based on the 3.1 Lite unofficial TRB template (\url{https://github.com/chiehrosswang/TRB_LaTeX_tex}). The main differences are how it does the bibliography, and that you can choose any filename for the main .tex file (instead of having to name it trb\_template.tex).
+
+The bibliography style is \verb1elsarticle-num-names1. You use the \verb1\citet1 and \verb1\citep1 commands like in standard \verb1natbib1.
+To do an in text citation like \citet{Williams2022}, type \verb1\citet{Williams2022}1. To do parenthetical citations like \citep{Smith2023,Chen2022}, use \verb1\citep{Smith2023,Chen2022}1. The template comes with a BibFile.bib file you can put your bibtex entries in.
+
+Here is a figure. Reference it with \verb1\ref{fig:figure}1 like Figure~\ref{fig:figure}. Likewise, you can reference a table with \verb1\ref{tab:table}1 like Table~\ref{tab:table}.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.6\textwidth]{example-image-a}
+  \caption{Put your figure here. A figure is worth 250 words.}\label{fig:figure}
+\end{figure}
+
+\begin{table}[!ht]
+  \caption{Here is a table.}\label{tab:table}
+  \begin{center}
+  \begin{tabular}{l r r r r}
+    Mode          & Passengers (M) & Distance (km) & Cost (\$) & Time (min) \\\hline
+    Bus           & 245.3          & 12.4          & 2.50      & 35         \\
+    Light Rail    & 189.7          & 8.9           & 3.00      & 22         \\
+    Subway        & 892.1          & 15.2          & 2.75      & 28         \\
+    Rideshare     & 156.4          & 9.7           & 15.50     & 18         \\
+    Bike Share    & 78.2           & 3.5           & 4.00      & 25         \\
+    Ferry         & 45.9           & 11.8          & 5.50      & 40         \\
+    Commuter Rail & 234.8          & 42.3          & 8.75      & 55         \\
+      Streetcar     & 67.5           & 5.6           & 2.25      & 30         \\\hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+For equations, use the \verb1\begin{linenomath}1 and \verb1\end{linenomath}1 commands. Here are three equations aligned with the flalign environment.
+
+\begin{linenomath}
+  \begin{flalign}
+     & \alpha_1 + \beta_1 = \gamma_1 & \\
+     & \alpha_2 + \beta_2 = \gamma_2 & \\
+     & \alpha_3 + \beta_3 = \gamma_3 &
+  \end{flalign}
+\end{linenomath}
+
+Here is a regular equation:
+
+\begin{linenomath}
+  \begin{equation}
+    s^*(v_\alpha,\Delta v_\alpha) = s_0 + v_\alpha\,T + \frac{v_\alpha\,\Delta v_\alpha}{2\,\sqrt{a\,b}}
+  \end{equation}
+\end{linenomath}
+
+\section{Acknowledgements}
+
+This template is based on the 3.1 Lite unofficial TRB template (\url{https://github.com/chiehrosswang/TRB_LaTeX_tex}) created by Chieh Ross Wang, David Pritchard, and Gregory Macfarlane. 
+
+\newpage
+
+\bibliographystyle{elsarticle-num-names}
+\bibliography{BibFile}
+\end{document}
